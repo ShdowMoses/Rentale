@@ -10,7 +10,7 @@ import ProductPage from "./pages/products.jsx";
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <h1 className="text-center mt-20">woi le</h1>,
+    element: <h1 className="text-center my-60 text-5xl font-semibold">woi le</h1>,
   },
   {
     path: "*",

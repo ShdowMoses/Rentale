@@ -1,48 +1,32 @@
 import CardProduct from "../components/Fragments/CardProduct";
 
+const products = [
+  {
+    id: 1,
+    name: "BMW E46",
+    price: "Rp.2.300.000",
+    image: "/images/e46.jpg",
+  },
+  {
+    id: 2,
+    name: "BMW E46",
+    price: "Rp.2.300.000",
+    image: "/images/e46.jpg",
+  },
+];
+
 const ProductPage = () => {
   return (
     <div className="mx-10 my-10">
       <CardProduct.Brand brand="BMW" />
       <div className="flex flex-wrap gap-10">
-        <CardProduct>
-          <CardProduct.Header
-            image="images/beemwe.jpg"
-            alt="BMW M4 Competition"
-          />
-          <CardProduct.Body title="BMW M4 Compe" price="Rp.3.500.000" />
-          <CardProduct.Footer />
-        </CardProduct>
-
-        <CardProduct>
-          <CardProduct.Header image="images/e46.jpg" alt="BMW E46" />
-          <CardProduct.Body title="BMW E46" price="Rp.2.100.000" />
-          <CardProduct.Footer />
-        </CardProduct>
-
-        <CardProduct>
-          <CardProduct.Header
-            image="images/bemwem.jpg"
-            alt="BMW M3 Competition"
-          />
-          <CardProduct.Body title="BMW M3 Competition" price="Rp.3.200.000" />
-          <CardProduct.Footer />
-        </CardProduct>
-      </div>
-
-      <CardProduct.Brand brand="Ferrari" />
-      <div className="flex flex-wrap gap-10">
-        <CardProduct>
-          <CardProduct.Header
-            image="images/feraru.jpg"
-            alt="Ferrari Michael Schumacher"
-          />
-          <CardProduct.Body
-            title="Ferrari Michael Schumacher"
-            price="Rp.350.000.000"
-          />
-          <CardProduct.Footer />
-        </CardProduct>
+        {products.map((product) => (
+          <CardProduct key={product.id}>
+            <CardProduct.Header image={product.image} alt="BMW E46" />
+            <CardProduct.Body name={product.name} price={product.price} />
+            <CardProduct.Footer />
+          </CardProduct>
+        ))}
       </div>
     </div>
   );

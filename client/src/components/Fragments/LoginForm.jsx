@@ -2,6 +2,9 @@ import Button from "../Elements/Button/Index";
 import InputForm from "../Elements/Input";
 
 const LoginForm = () => {
+  const handleLogin = () => {
+    console.log("woi le");
+  };
   return (
     <div>
       <form action="" className="m-5">
@@ -17,7 +20,10 @@ const LoginForm = () => {
           placeholder="******"
           name="password"
         />
-        <Button variant="bg-blue-600 w-full text-white font-poppins font-medium">
+        <Button
+          variant="bg-blue-600 w-full text-white font-poppins font-medium"
+          onClick={handleLogin}
+        >
           Login
         </Button>
       </form>

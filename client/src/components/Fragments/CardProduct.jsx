@@ -31,12 +31,12 @@ const Header = (props) => {
 };
 
 const Body = (props) => {
-  const { title, price } = props;
+  const { name, price } = props;
   return (
     <div className="px-4 pb-4 pt-4">
       <a href="">
         <h5 className="text-xl font-semibold text-black tracking-tight">
-          {title}
+          {name}
         </h5>
         <p className="mt-1 text-sm">{price}/hari</p>
       </a>
