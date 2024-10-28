@@ -3,7 +3,7 @@ import InputForm from "../Elements/Input";
 
 const RegisterForm = () => {
   return (
-    <form action="">
+    <form action="" className="m-5">
       <InputForm
         label="Fullname"
         type="text"

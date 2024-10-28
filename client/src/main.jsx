@@ -5,6 +5,7 @@ import "./index.css";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import RegisterPage from "./pages/register.jsx";
 import LoginPage from "./pages/login.jsx";
+import ProductPage from "./pages/products.jsx";
 
 const router = createBrowserRouter([
   {
@@ -13,7 +14,7 @@ const router = createBrowserRouter([
   },
   {
     path: "*",
-    element: <h1>ga ada kocak</h1>,
+    element: <h1 className="text-center text-9xl my-48">ga ada kocak</h1>,
   },
   {
     path: "/login",
@@ -22,6 +23,10 @@ const router = createBrowserRouter([
   {
     path: "/register",
     element: <RegisterPage />,
+  },
+  {
+    path: "/products",
+    element: <ProductPage />,
   },
 ]);
 
