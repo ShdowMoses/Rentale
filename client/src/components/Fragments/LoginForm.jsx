@@ -2,12 +2,15 @@ import Button from "../Elements/Button/Index";
 import InputForm from "../Elements/Input";
 
 const LoginForm = () => {
-  const handleLogin = () => {
-    console.log("woi le");
+  const handleLogin = (e) => {
+    e.preventDefault();
+    localStorage.setItem("email", e.target.email.value);
+    localStorage.setItem("password", e.target.password.value);
+    window.location.href = "/products"
   };
   return (
     <div>
-      <form action="" className="m-5">
+      <form onSubmit={handleLogin} className="m-5">
         <InputForm
           label="Email"
           type="email"
@@ -22,7 +25,7 @@ const LoginForm = () => {
         />
         <Button
           variant="bg-blue-600 w-full text-white font-poppins font-medium"
-          onClick={handleLogin}
+          type="submit"
         >
           Login
         </Button>

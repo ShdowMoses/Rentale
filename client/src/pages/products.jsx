@@ -1,3 +1,4 @@
+import Button from "../components/Elements/Button/Index";
 import CardProduct from "../components/Fragments/CardProduct";
 
 const products = [
@@ -15,20 +16,36 @@ const products = [
   },
 ];
 
+const email = localStorage.getItem("email");
+
 const ProductPage = () => {
+  const handleLogout = () => {
+    localStorage.removeItem("email");
+    localStorage.removeItem("password");
+    window.location.href = "/login";
+  };
+
   return (
-    <div className="mx-10 my-10">
-      <CardProduct.Brand brand="BMW" />
-      <div className="flex flex-wrap gap-10">
-        {products.map((product) => (
-          <CardProduct key={product.id}>
-            <CardProduct.Header image={product.image} alt="BMW E46" />
-            <CardProduct.Body name={product.name} price={product.price} />
-            <CardProduct.Footer />
-          </CardProduct>
-        ))}
+    <>
+      <div className="flex justify-end h-10 bg-gray-400 text-white items-center px-10">
+        {email}
+        <Button variant="ml-5 bg-red-600" onClick={handleLogout}>
+          Logout
+        </Button>
       </div>
-    </div>
+      <div className="mx-10 my-10">
+        <CardProduct.Brand brand="BMW" />
+        <div className="flex flex-wrap gap-10">
+          {products.map((product) => (
+            <CardProduct key={product.id}>
+              <CardProduct.Header image={product.image} alt="BMW E46" />
+              <CardProduct.Body name={product.name} price={product.price} />
+              <CardProduct.Footer />
+            </CardProduct>
+          ))}
+        </div>
+      </div>
+    </>
   );
 };
 
