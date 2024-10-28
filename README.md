@@ -1,12 +1,13 @@
 # Car Rental Website
 
-A modern web application for renting luxury cars built with React and Tailwind CSS.
+A modern web application for renting cars built with React and Tailwind CSS.
 
-## 🚀 Features
+## ⚙️ Tech Stack
 
-- User authentication and authorization
-- Car browsing and filtering
-- Booking management system
-- Online payment integration
-- Admin dashboard
-- Responsive design
+- React.js
+- Tailwind CSS
+- Node.js
+- Express.js
+- Mysql
+- Redux Toolkit
+- React Route
