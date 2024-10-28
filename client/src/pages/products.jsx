@@ -3,7 +3,7 @@ import CardProduct from "../components/Fragments/CardProduct";
 const ProductPage = () => {
   return (
     <div className="mx-10 my-10">
-      <h1 className="text-2xl font-semibold mb-6">BMW</h1>
+      <CardProduct.Brand brand="BMW" />
       <div className="flex flex-wrap gap-10">
         <CardProduct>
           <CardProduct.Header
@@ -29,7 +29,8 @@ const ProductPage = () => {
           <CardProduct.Footer />
         </CardProduct>
       </div>
-      <h1 className="mb-6 mt-10">Ferrari</h1>
+
+      <CardProduct.Brand brand="Ferrari" />
       <div className="flex flex-wrap gap-10">
         <CardProduct>
           <CardProduct.Header

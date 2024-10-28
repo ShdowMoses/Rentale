@@ -1,5 +1,13 @@
 import Button from "../Elements/Button/Index";
 
+const Brand = (props) => {
+  const { brand } = props;
+  return (
+    <h1 className="text-2xl font-semibold mt-10 mb-6">{brand}</h1>
+  );
+};
+
+// Card
 const CardProduct = (props) => {
   const { children } = props;
   return (
@@ -45,6 +53,8 @@ const Footer = () => {
     </div>
   );
 };
+
+CardProduct.Brand = Brand
 
 CardProduct.Header = Header;
 CardProduct.Body = Body;
