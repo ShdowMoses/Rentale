@@ -28,7 +28,7 @@ const RegisterForm = () => {
         placeholder="******"
         name="confirmPassword"
       />
-      <Button variant="bg-blue-600 w-full text-white font-poppins font-medium">
+      <Button variant="bg-[#2461DE] w-full text-white font-poppins font-medium">
         Register
       </Button>
     </form>

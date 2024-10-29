@@ -29,7 +29,7 @@ const ProductPage = () => {
     <>
       <div className="flex justify-end h-10 bg-gray-400 text-white items-center px-10">
         {email}
-        <Button variant="ml-5 bg-red-600" onClick={handleLogout}>
+        <Button variant="ml-5 bg-red-600 text-sm" onClick={handleLogout}>
           Logout
         </Button>
       </div>
@@ -38,7 +38,7 @@ const ProductPage = () => {
         <div className="flex flex-wrap gap-10">
           {products.map((product) => (
             <CardProduct key={product.id}>
-              <CardProduct.Header image={product.image} alt="BMW E46" />
+              <CardProduct.Header image={product.image} />
               <CardProduct.Body name={product.name} price={product.price} />
               <CardProduct.Footer />
             </CardProduct>

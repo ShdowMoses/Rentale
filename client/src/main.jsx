@@ -6,11 +6,12 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import RegisterPage from "./pages/register.jsx";
 import LoginPage from "./pages/login.jsx";
 import ProductPage from "./pages/products.jsx";
+import LandingPage from "./pages/landingPage.jsx";
 
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <h1 className="text-center my-60 text-5xl font-semibold">woi le</h1>,
+    element: <LandingPage />,
   },
   {
     path: "*",

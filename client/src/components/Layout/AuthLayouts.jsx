@@ -5,7 +5,7 @@ const AuthLayouts = (props) => {
   return (
     <div className="flex justify-center min-h-screen items-center">
       <div className="w-full max-w-sm rounded-lg bg-slate-200">
-        <h1 className="text-3xl mb-2 m-5 font-poppins font-semibold text-blue-600">
+        <h1 className="text-3xl mb-2 m-5 font-poppins font-semibold text-[#2461DE]">
           {title}
         </h1>
         <p className="font-medium text-slate-500 m-5 mb-9">

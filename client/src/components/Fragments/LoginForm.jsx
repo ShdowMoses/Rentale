@@ -6,7 +6,7 @@ const LoginForm = () => {
     e.preventDefault();
     localStorage.setItem("email", e.target.email.value);
     localStorage.setItem("password", e.target.password.value);
-    window.location.href = "/products"
+    window.location.href = "/products";
   };
   return (
     <div>
@@ -24,7 +24,7 @@ const LoginForm = () => {
           name="password"
         />
         <Button
-          variant="bg-blue-600 w-full text-white font-poppins font-medium"
+          variant="bg-[#2461DE] w-full text-white font-poppins font-medium"
           type="submit"
         >
           Login
