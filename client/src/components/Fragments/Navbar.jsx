@@ -3,7 +3,7 @@ import NavbarComponent from "../Elements/Navbar";
 const Navbar = () => {
   return (
     <>
-      <NavbarComponent></NavbarComponent>
+      <NavbarComponent navColor="bg-transparent" navText="text-white" />
     </>
   );
 };

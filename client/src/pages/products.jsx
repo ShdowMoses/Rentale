@@ -1,5 +1,7 @@
 import Button from "../components/Elements/Button/Index";
+import NavbarComponent from "../components/Elements/Navbar";
 import CardProduct from "../components/Fragments/CardProduct";
+import Navbar from "../components/Fragments/Navbar";
 
 const products = [
   {
@@ -27,12 +29,16 @@ const ProductPage = () => {
 
   return (
     <>
-      <div className="flex justify-end h-10 bg-gray-400 text-white items-center px-10">
+      {/* <div className="flex justify-end h-10 bg-gray-400 text-white items-center px-10">
         {email}
         <Button variant="ml-5 bg-red-600 text-sm" onClick={handleLogout}>
           Logout
         </Button>
-      </div>
+      </div> */}
+      <NavbarComponent
+        navColor="bg-transparent"
+        navText="text-[#14274E]"
+      ></NavbarComponent>
       <div className="mx-10 my-10">
         <CardProduct.Brand brand="BMW" />
         <div className="flex flex-wrap gap-10">
