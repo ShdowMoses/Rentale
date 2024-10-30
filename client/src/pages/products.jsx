@@ -33,7 +33,7 @@ const ProductPage = () => {
         {email}
         <Button variant="ml-5 bg-red-600 text-sm" onClick={handleLogout}>
           Logout
-        </Button>
+        </Button> 
       </div> */}
       <NavbarComponent
         navColor="bg-transparent"

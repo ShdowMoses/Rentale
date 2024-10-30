@@ -1,5 +1,7 @@
+
 const Input = (props) => {
   const { type, placeholder, name } = props;
+
   return (
     <input
       type={type}
