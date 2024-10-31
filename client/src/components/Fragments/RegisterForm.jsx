@@ -1,4 +1,4 @@
-import Button from "../Elements/Button/Index";
+import Button from "../Elements/Button/index.jsx";
 import InputForm from "../Elements/Input";
 
 const RegisterForm = () => {

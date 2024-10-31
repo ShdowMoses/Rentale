@@ -1,6 +1,7 @@
 import User from "../models/UserModel.js";
 import argon2 from "argon2";
 
+// login
 export const Login = async (req, res) => {
   const user = await User.findOne({
     where: {
@@ -18,6 +19,8 @@ export const Login = async (req, res) => {
   res.status(200).json({ uuid, name, email, role });
 };
 
+
+// get personal data
 export const Me = async (req, res) => {
   if (!req.session.userId) {
     return res.status(401).json({ message: "Please login to your account" });
@@ -32,6 +35,8 @@ export const Me = async (req, res) => {
   res.status(200).json(user);
 };
 
+
+// logout
 export const LogOut = (req, res) => {
   req.session.destroy((error) => {
     if (error) return res.status(400).json({ message: "Cannot logout" });

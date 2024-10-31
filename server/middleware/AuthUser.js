@@ -1,5 +1,6 @@
 import User from "../models/UserModel.js";
 
+// verify the user
 export const verifyUser = async (req, res, next) => {
   if (!req.session.userId) {
     return res.status(401).json({ message: "Please login to your account" });
@@ -15,6 +16,7 @@ export const verifyUser = async (req, res, next) => {
   next();
 };
 
+// admin only 
 export const adminOnly = async (req, res, next) => {
   const user = await User.findOne({
     where: {
