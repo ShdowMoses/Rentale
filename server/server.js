@@ -1,26 +1,48 @@
 import express from "express";
-import mysql from "mysql2";
+import session from "express-session";
 import cors from "cors";
-import jwt from "jsonwebtoken";
-import bcrypt from "bcrypt";
-import cookieParser from "cookie-parser";
+import dotenv from "dotenv";
+import db from "./config/db.js";
+import SequelizeStore from "connect-session-sequelize";
+import AuthRoute from "./routes/AuthRoute.js";
+import userRoute from "./routes/UserRoute.js";
+import ProductRoute from "./routes/ProductRoute.js";
+dotenv.config();
 
 const app = express();
+
+const sessionStore = SequelizeStore(session.Store);
+
+const store = new sessionStore({
+  db: db,
+});
+
+// (async () => {
+//   await db.sync();
+// })();
+
+app.use(
+  session({
+    secret: process.env.SESS_SECRET,
+    resave: false,
+    saveUninitialized: true,
+    cookie: {
+      secure: "auto",
+    },
+  })
+);
+
+app.use(
+  cors({
+    credentials: true,
+    origin: "http://localhost:5000",
+  })
+);
 app.use(express.json());
-app.use(cors());
-app.use(cookieParser());
+app.use(userRoute);
+app.use(ProductRoute);
+app.use(AuthRoute);
 
-const db = mysql.createConnection({
-  host: "localhost",
-  user: "root",
-  password: "siki12345",
-  database: "rentale",
-});
-
-app.get("/", (req, res) => {
-  res.json("woi lemao awikwok");
-});
-
-app.listen(8080, () => {
-  console.log("berhasil le");
+app.listen(process.env.PORT, () => {
+  console.log("Server running");
 });
