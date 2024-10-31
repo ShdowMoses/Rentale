@@ -26,6 +26,7 @@ app.use(
     secret: process.env.SESS_SECRET,
     resave: false,
     saveUninitialized: true,
+    store: store,
     cookie: {
       secure: "auto",
     },
@@ -42,6 +43,8 @@ app.use(express.json());
 app.use(userRoute);
 app.use(ProductRoute);
 app.use(AuthRoute);
+
+// store.sync();
 
 app.listen(process.env.PORT, () => {
   console.log("Server running");
