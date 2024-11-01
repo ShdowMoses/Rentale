@@ -1,5 +1,6 @@
 import Button from "../Elements/Button/index.jsx";
 
+// brand title
 const Brand = (props) => {
   const { brand } = props;
   return (
@@ -19,6 +20,7 @@ const CardProduct = (props) => {
   );
 };
 
+// header card
 const Header = (props) => {
   const { image, alt } = props;
   return (
@@ -30,6 +32,7 @@ const Header = (props) => {
   );
 };
 
+// body card
 const Body = (props) => {
   const { name, price } = props;
   return (
@@ -44,6 +47,7 @@ const Body = (props) => {
   );
 };
 
+// footer card
 const Footer = () => {
   return (
     <div className="flex justify-center">
@@ -55,7 +59,6 @@ const Footer = () => {
 };
 
 CardProduct.Brand = Brand
-
 CardProduct.Header = Header;
 CardProduct.Body = Body;
 CardProduct.Footer = Footer;

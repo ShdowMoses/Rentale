@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import Button from "../Button/Index";
+import Button from "../Button/index.jsx";
 
 const NavbarComponent = (props) => {
   const { navColor, navText } = props;

@@ -1,7 +1,5 @@
-import Button from "../components/Elements/Button/Index";
 import NavbarComponent from "../components/Elements/Navbar";
 import CardProduct from "../components/Fragments/CardProduct";
-import Navbar from "../components/Fragments/Navbar";
 
 const products = [
   {

@@ -5,7 +5,6 @@ const LoginPage = () => {
   return (
     <AuthLayouts title="Login" type="login">
       <LoginForm />
-      
     </AuthLayouts>
   );
 };
