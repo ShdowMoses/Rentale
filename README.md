@@ -11,5 +11,4 @@ A modern web application for renting cars built with React and Tailwind CSS.
 - Node.js
 - Express.js
 - Mysql
-- Redux Toolkit
 - React Route
