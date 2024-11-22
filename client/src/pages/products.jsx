@@ -14,6 +14,12 @@ const products = [
     price: "Rp.2.300.000",
     image: "/images/e46.jpg",
   },
+  {
+    id: 3,
+    name: "BMW E46",
+    price: "Rp.2.300.000",
+    image: "/images/e46.jpg",
+  },
 ];
 
 const email = localStorage.getItem("email");

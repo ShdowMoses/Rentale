@@ -46,6 +46,23 @@ app.use(AuthRoute);
 
 // store.sync();
 
+
+app.get('/api/cars', (req, res) => {
+  const query = 'SELECT * FROM cars';
+  
+  db.query(query, (error, results) => {
+    if (error) {
+      console.error('Error fetching cars:', error);
+      res.status(500).json({ error: 'Internal server error' });
+      return;
+    }
+    res.json(results);
+  });
+});
+
+
+
+
 app.listen(process.env.PORT, () => {
   console.log("Server running");
 });

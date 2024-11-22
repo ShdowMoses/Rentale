@@ -1,4 +1,4 @@
-import Navbar from "../components/Fragments/Navbar";
+import Navbar from "../components/Layout/Navbar";
 
 const LandingPage = () => {
   return (
