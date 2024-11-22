@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { FiHome, FiUser, FiBox } from "react-icons/fi";
+import { FiHome, FiUser, FiBox, FiLogOut } from "react-icons/fi";
 
 const Sidebar = () => {
   return (
@@ -42,12 +42,12 @@ const Sidebar = () => {
           <p className="block text-gray-700 font-semibold text-lg hover:text-gray-900 transition-colors duration-200">
             Setting
           </p>
-          <a
-            href="#"
+          <Link
+            to={"/login"}
             className="block text-red-500 font-bold hover:text-red-700 transition-colors duration-200"
-          >
+          > <FiLogOut/>
             Logout
-          </a>
+          </Link>
         </nav>
       </aside>
     </>

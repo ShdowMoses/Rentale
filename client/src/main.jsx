@@ -12,6 +12,7 @@ import LandingPage from "./pages/landingPage.jsx";
 import DashboardPage from "./pages/adminDashboard.jsx";
 import DashboardProduct from "./pages/adminDashboardProduct.jsx";
 import DashboardUsers from "./pages/adminDashboardUser.jsx";
+import DashboardProductsCreate from "./pages/adminDashboardAddProduct.jsx";
 
 const router = createBrowserRouter([
   {
@@ -41,6 +42,10 @@ const router = createBrowserRouter([
   {
     path: "/dashboard/products",
     element: <DashboardProduct />,
+  },
+  {
+    path: "/dashboard/product/add",
+    element: <DashboardProductsCreate />,
   },
   {
     path: "/dashboard/users",

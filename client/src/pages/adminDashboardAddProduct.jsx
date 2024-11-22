@@ -1,8 +1,8 @@
 import { Link } from "react-router-dom";
 import Sidebar from "../components/Dashboard/Sidebar";
-import ProductList from "../components/Dashboard/ProductList";
+import AddProduct from "../components/Dashboard/CreateProduct";
 
-const DashboardProducts = () => {
+const DashboardProductsAdd = () => {
   return (
     <>
       {" "}
@@ -24,10 +24,10 @@ const DashboardProducts = () => {
       </nav>
       <div className="flex h-screen">
         <Sidebar />
-        <ProductList />
+        <AddProduct />
       </div>
     </>
   );
 };
 
-export default DashboardProducts;
+export default DashboardProductsAdd;

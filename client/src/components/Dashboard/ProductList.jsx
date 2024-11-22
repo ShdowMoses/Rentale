@@ -1,39 +1,61 @@
+import { Link } from "react-router-dom";
+import Button from "../Elements/Button";
 
 const ProductList = () => {
   const products = [
     {
       id: 1,
       name: "BEEMWE",
+      product_description: "lorem ipsum dolor sit amet",
       price: "Rp2.500.000",
+      license_plate: "BK 000 XYZ",
+      brand: "BMW",
       status: "Available",
     },
     {
       id: 2,
       name: "SUPRA",
+      product_description: "lorem ipsum dolor sit amet",
       price: "Rp3.500.000",
+      license_plate: "BK 89 HQ",
+      brand: "Toyota",
       status: "Available",
     },
   ];
 
   return (
-    <div className="w-screen">
-      <h1 className="font-bold text-3xl ml-10 mt-5">List of Products</h1>
+    <div className="w-screen p-5">
+      <div className="flex justify-between items-center mb-6">
+        <h1 className="font-bold text-3xl  ml-10 mt-5">List of Products</h1>
+        <Button variant="bg-[#2461DE] text-white text-sm mt-5 h-12">
+          <Link to={"/dashboard/product/add"}>Add Product</Link>
+        </Button>
+      </div>
 
       <div className="px-4 sm:px-6 lg:px-8">
         <div className="mt-8 flow-root">
           <div className="-mx-4 -my-2 overflow-x-auto sm:-mx-6 lg:-mx-8">
             <div className="inline-block min-w-full py-2 align-middle">
-              <table className="min-w-full divide-y divide-gray-200">
+              <table className="w-full divide-y divide-gray-200">
                 <thead className="bg-gray-50">
-                  <tr>
+                  <tr className="text-left">
                     <th className="px-6 py-3 text-left text-sm font-semibold text-gray-900">
                       Id
                     </th>
                     <th className="px-6 py-3 text-left text-sm font-semibold text-gray-900">
-                      Name Product
+                      Product Name
+                    </th>
+                    <th className="px-6 py-3 text-left text-sm font-semibold text-gray-900">
+                      Product Description
                     </th>
                     <th className="px-6 py-3 text-left text-sm font-semibold text-gray-900">
                       Price
+                    </th>
+                    <th className="px-6 py-3 text-left text-sm font-semibold text-gray-900">
+                      License Plate
+                    </th>
+                    <th className="px-6 py-3 text-left text-sm font-semibold text-gray-900">
+                      Brand
                     </th>
                     <th className="px-6 py-3 text-left text-sm font-semibold text-gray-900">
                       Status
@@ -53,7 +75,16 @@ const ProductList = () => {
                         {user.name}
                       </td>
                       <td className="px-6 py-4 text-sm text-gray-500">
+                        {user.product_description}
+                      </td>
+                      <td className="px-6 py-4 text-sm text-gray-500">
                         {user.price}
+                      </td>
+                      <td className="px-6 py-4 text-sm text-gray-500">
+                        {user.license_plate}
+                      </td>
+                      <td className="px-6 py-4 text-sm text-gray-500">
+                        {user.brand}
                       </td>
                       <td className="px-6 py-4 text-sm">
                         <span
@@ -67,12 +98,15 @@ const ProductList = () => {
                         </span>
                       </td>
                       <td className="px-6 py-4 text-sm">
-                        <button className="text-indigo-600 hover:text-indigo-900 mr-2">
-                          Edit
-                        </button>
-                        <button className="text-red-600 hover:text-red-900">
-                          Delete
-                        </button>
+                        <div className="flex space-x-1">
+                          {" "}
+                          <Button variant="text-white bg-indigo-600 mr-2">
+                            Update
+                          </Button>
+                          <Button variant="text-white bg-red-600  ">
+                            Delete
+                          </Button>
+                        </div>
                       </td>
                     </tr>
                   ))}
